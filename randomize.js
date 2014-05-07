@@ -39,13 +39,3 @@ var randomize = function (firstvalue, secondvalue) {
                 };
 };
 
-
-/**
- * Use Example
- */
-
-// Integer Numbers
-var dice = randomize(1,6);
-
-// Decimal Numbers
-var variation = randomize(10.5,10.7);
