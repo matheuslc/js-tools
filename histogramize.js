@@ -83,6 +83,29 @@ var histogramize = {};
         for (var i = this.numeroClasse() - 1; i >= 0; i--) {
             intervaloClasse[i]  = rs;
             rs = rs + this.tamanhoIntervalo() - 1;
-    };
+    	};
+    	
     	return intervaloClasse.reverse();
-};
+	};
+
+	/**
+     * Calculate frequency of items in ROL.
+     * @returns  {Array} with frequency. 
+    */
+	histogramize.frequencia = function () {
+		var count,
+			frequency = [];
+
+		for (var i = this.rol().length - 1; i >= 0; i--) {
+			
+			if ( this.rol()[i] !== count) {
+				frequency.push(1)
+			} else{
+				frequency[frequency.length-1]++;
+			};
+
+			count = this.rol()[i];
+		};
+
+		return frequency.reverse();
+	};
